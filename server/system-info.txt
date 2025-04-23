@@ -1,0 +1,182 @@
+~ System Requirements ~
+
+!Core Features:
+    1. User Roles
+        - Customer:
+            - Browse products, add to cart, place orders, print receipts.
+        - Retail Admin:
+            - Manage retail products (add/update/delete).
+            - View retail-specific sales reports and low-stock alerts.
+        - Fast-Food Admin:
+            - Manage fast-food products and combo packages.
+            - View fast-food-specific sales reports and low-stock alerts.
+
+    2. Store-Type Selection
+        - Customers choose Retail or Fast-Food on the landing page.
+        - Admins are automatically restricted to their assigned store type (e.g., Retail Admin cannot access fast-food products).
+
+    3. Admin Authentication
+        - Admins log in via a separate /admin/login route.
+        - Retail Admins see only retail products/reports; Fast-Food Admins see only fast-food products/combos.
+
+    4. Product Management
+        - Retail Admin:
+            - No access to combo management.
+            - Retail products have no maxQuantity limit.
+        - Fast-Food Admin:
+            - Create/update combos with customizable components (e.g., "Choose 1 main, 2 sides").
+            - Combo price = sum of component prices × (1 - discount).
+
+    5. Reporting
+        - Admins see reports only for their store type.
+        - Reports include:
+            - Total sales (revenue + order count).
+            - Popular items (ranked by quantity sold).
+            - Low-stock alerts (customizable per product).
+
+ => Revised Database Schemas
+
+1. Admin Schema
+    {
+    username: { type: String, required: true, unique: true },
+    passwordHash: { type: String, required: true }, // Hashed with bcrypt
+    adminType: { 
+        type: String, 
+        enum: ["retail", "fast-food"], 
+        required: true 
+    }
+    }
+
+2. Product Schema
+    {
+    name: { type: String, required: true },
+    price: { type: Number, required: true },
+    stock: { type: Number, required: true },
+    category: { type: String }, // e.g., "Beverage", "Toiletries"
+    storeType: { 
+        type: String, 
+        enum: ["fast-food", "retail"], 
+        required: true 
+    },
+    lowStockThreshold: { type: Number, default: 5 } // Customizable by admin
+    }
+
+3. Combo Schema (Fast-Food Only)
+    {
+    name: { type: String, required: true },
+    components: {
+        // Define allowed choices (e.g., customer picks 1 main from 3 options)
+        main: [{ 
+        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
+        quantity: { type: Number, default: 1 } 
+        }],
+        sides: [{ 
+        productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+        quantity: { type: Number, default: 1 } 
+        }]
+    },
+    discount: { type: Number, default: 0.4 }, // 40% discount
+    isActive: { type: Boolean, default: true }
+    }   
+
+4. Order Schema
+    {
+    items: [
+        {
+        itemType: { type: String, enum: ["product", "combo"], required: true },
+        itemId: { type: mongoose.Schema.Types.ObjectId, required: true }, // Product or Combo ID
+        quantity: { type: Number, required: true },
+        price: { type: Number, required: true }, // Price at order time
+        // For combos: Track selected components (e.g., chosen burger, fries)
+        selectedComponents: {
+            main: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+            sides: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }]
+        }
+        }
+    ],
+    totalPrice: { type: Number, required: true },
+    orderDate: { type: Date, default: Date.now },
+    receiptNumber: { type: String, unique: true }, // Generate with nanoid
+    storeType: { type: String, enum: ["fast-food", "retail"], required: true }
+    }
+
+ => Key Changes: 
+    1. Admin Separation:
+        - Retail/Fast-Food Admins have separate dashboards and permissions.
+        - Added adminType to the Admin Schema for role-based filtering.
+    2. Simplified Combos:
+        - Combos are pre-defined by Fast-Food Admins but allow customers to choose components.
+    3. Dynamic Reports:
+        - Reports are generated from Order data filtered by storeType and admin role.
+    4. Atomic Stock Updates:
+        - Use MongoDB’s findOneAndUpdate to ensure stock is deducted reliably during checkout.
+
+ => Implementation Tips: 
+
+1. Admin Login Flow (React):
+    // AdminLogin.jsx
+    const AdminLogin = () => {
+        const [username, setUsername] = useState("");
+        const [password, setPassword] = useState("");
+
+        const handleLogin = async () => {
+            const response = await fetch("/api/admin/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+            });
+            const { token, adminType } = await response.json();
+            localStorage.setItem("adminToken", token);
+            localStorage.setItem("adminType", adminType);
+            // Redirect to dashboard
+        };
+
+        return (
+            <div>
+            <input type="text" onChange={(e) => setUsername(e.target.value)} />
+            <input type="password" onChange={(e) => setPassword(e.target.value)} />
+            <button onClick={handleLogin}>Login</button>
+            </div>
+        );
+    };
+
+2. Role-Based Filtering (Node.js):
+    // Middleware to restrict admins to their store type
+    app.get("/api/admin/products", async (req, res) => {
+        const products = await Product.find({ storeType: req.admin.adminType });
+        res.json(products);
+        });
+
+        3. Combo Price Calculation:
+
+        // Calculate combo price at checkout
+        const calculateComboPrice = async (comboId, selectedComponents) => {
+        const combo = await Combo.findById(comboId);
+        let total = 0;
+
+        // Sum prices of selected components
+        for (const componentType in selectedComponents) {
+            const componentProduct = await Product.findById(selectedComponents[componentType]);
+            total += componentProduct.price * combo.components[componentType].quantity;
+        }
+
+        return total * (1 - combo.discount);
+    };
+
+
+Folder Structure: 
+my-kiosk-project/          # Root folder
+├── client/                # Customer Kiosk (Vite + React + javascript) installed react-router-dom, localstorage-slim, axios
+│   ├── src/                   
+│   ├── public/
+│   └── package.json
+│
+├── admin-dashboard/       # Admin Dashboard (Vite + React + javascript) installed react-router-dom, localstorage-slim, axios
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+└── server/                # Node.js/Express API installed express, mongoose, cors, dotenv, bcryptjs, jsonwebtoken
+    ├── models/
+    ├── routes/
+    └── package.json

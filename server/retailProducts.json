@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Organic Whole Wheat Pasta",
+    "price": 289,
+    "stock": 150,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Stainless Steel Mixing Bowls Set",
+    "price": 1449,
+    "stock": 75,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Lavender Scented Candles (Pack of 3)",
+    "price": 725,
+    "stock": 200,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Vitamin C Immune Support Gummies",
+    "price": 1088,
+    "stock": 90,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Natural Creamy Peanut Butter",
+    "price": 376,
+    "stock": 120,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Diapers Size 3 (120 Count)",
+    "price": 1739,
+    "stock": 60,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Premium Dog Food (20lb Bag)",
+    "price": 2667,
+    "stock": 50,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Antibacterial Hand Soap Refill",
+    "price": 231,
+    "stock": 180,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Coffee Filters (100 Count)",
+    "price": 305,
+    "stock": 200,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Extra Virgin Olive Oil Spray",
+    "price": 521,
+    "stock": 100,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Organic Quinoa (2lb Bag)",
+    "price": 579,
+    "stock": 85,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Non-Stick Baking Sheet",
+    "price": 869,
+    "stock": 65,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Almond Milk (1 Gallon)",
+    "price": 260,
+    "stock": 110,
+    "category": "Beverages",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Multivitamin Tablets (60 Count)",
+    "price": 753,
+    "stock": 95,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Wipes (720 Count)",
+    "price": 1159,
+    "stock": 70,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Cat Litter (20lb)",
+    "price": 927,
+    "stock": 55,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Moisturizing Body Lotion",
+    "price": 463,
+    "stock": 130,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Paper Towels (12 Rolls)",
+    "price": 637,
+    "stock": 150,
+    "category": "Cleaning Supplies",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Organic Honey (16oz)",
+    "price": 492,
+    "stock": 90,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Electric Kettle",
+    "price": 1739,
+    "stock": 40,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Green Tea Bags (100 Count)",
+    "price": 405,
+    "stock": 120,
+    "category": "Beverages",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Fish Oil Softgels (200 Count)",
+    "price": 985,
+    "stock": 80,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Bottle Sterilizer",
+    "price": 2029,
+    "stock": 30,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Dog Chew Toys (3-Pack)",
+    "price": 753,
+    "stock": 90,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Sensitive Toothpaste",
+    "price": 289,
+    "stock": 160,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Disinfecting Wipes (75 Count)",
+    "price": 347,
+    "stock": 200,
+    "category": "Cleaning Supplies",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Organic Brown Rice (5lb)",
+    "price": 463,
+    "stock": 100,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Ceramic Dinnerware Set",
+    "price": 2899,
+    "stock": 25,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Sparkling Mineral Water (12-Pack)",
+    "price": 289,
+    "stock": 140,
+    "category": "Beverages",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Probiotic Capsules (60 Count)",
+    "price": 1333,
+    "stock": 70,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Food Pouches (12-Pack)",
+    "price": 869,
+    "stock": 60,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Cat Food (10lb Bag)",
+    "price": 1159,
+    "stock": 45,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Shampoo & Conditioner Set",
+    "price": 695,
+    "stock": 110,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Laundry Detergent (100oz)",
+    "price": 753,
+    "stock": 85,
+    "category": "Cleaning Supplies",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Organic Coconut Oil (16oz)",
+    "price": 579,
+    "stock": 95,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Blender with Travel Cups",
+    "price": 2319,
+    "stock": 35,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Cold Brew Coffee Concentrate",
+    "price": 434,
+    "stock": 120,
+    "category": "Beverages",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Turmeric Curcumin Supplements",
+    "price": 840,
+    "stock": 65,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Bath Towels (6-Pack)",
+    "price": 985,
+    "stock": 50,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Dog Leash & Collar Set",
+    "price": 927,
+    "stock": 60,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Facial Cleanser (8oz)",
+    "price": 521,
+    "stock": 130,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Glass Cleaner Spray",
+    "price": 231,
+    "stock": 170,
+    "category": "Cleaning Supplies",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Organic Granola (24oz)",
+    "price": 405,
+    "stock": 105,
+    "category": "Food & Groceries",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Air Fryer (6-Quart)",
+    "price": 4639,
+    "stock": 20,
+    "category": "Home & Kitchen",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Herbal Tea Sampler (20 Bags)",
+    "price": 347,
+    "stock": 140,
+    "category": "Beverages",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Melatonin Sleep Gummies",
+    "price": 637,
+    "stock": 75,
+    "category": "Health",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Baby Bottles (6-Pack)",
+    "price": 1449,
+    "stock": 40,
+    "category": "Baby Care",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Cat Scratching Post",
+    "price": 1333,
+    "stock": 30,
+    "category": "Pet Supplies",
+    "storeType": "retail",
+    "maxQuantity": 20,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Sunscreen SPF 50 (6oz)",
+    "price": 724,
+    "stock": 90,
+    "category": "Personal Care",
+    "storeType": "retail",
+    "maxQuantity": 50,
+    "lowStockThreshold": 5
+  },
+  {
+    "name": "Dishwasher Detergent Pods (60 Count)",
+    "price": 579,
+    "stock": 110,
+    "category": "Cleaning Supplies",
+    "storeType": "retail",
+    "maxQuantity": 100,
+    "lowStockThreshold": 5
+  }
+]

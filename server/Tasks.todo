@@ -1,0 +1,56 @@
+Tasks to Implement or Enhance
+
+    1. Enhance Authentication and Authorization:
+
+        Task: Implement role-based access control for different admin types (Retail Admin, Fast-Food Admin).
+
+        Details: Modify the authMiddleware to check for specific admin roles and restrict access to certain 
+        routes based on these roles.
+
+
+    2. Implement Store-Type Selection:
+
+        Task: Allow customers to select between Retail or Fast-Food store types.
+
+        Details: Add logic to handle store-type selection on the client-side and ensure the server processes 
+        requests based on the selected store type.
+
+
+    3. Develop Combo Management:
+
+        Task: Implement CRUD operations for managing fast-food combos.
+
+        Details: Create a Combo model and corresponding routes and controllers to handle combo creation, 
+        updates, and deletions.
+
+
+    4. Enhance Order Management:
+
+        Task: Implement receipt generation and order history retrieval.
+
+        Details: Ensure the generateReceiptPDF function is correctly implemented and integrate it with order 
+        processing. Add endpoints to retrieve order history for customers.
+
+
+    5. Implement Reporting:
+
+        Task: Develop endpoints for generating sales reports and low-stock alerts.
+
+        Details: Create logic to aggregate data from orders and products to generate reports. 
+        Implement endpoints to retrieve these reports based on admin roles and store types.
+
+
+    6. Improve Error Handling and Validation:
+
+        Task: Enhance error handling and input validation across all endpoints.
+
+        Details: Use libraries like express-validator to validate incoming requests and improve error messages 
+        for better debugging.
+
+        
+    7. Testing and Documentation:
+
+        Task: Write tests for all API endpoints and document the API.
+
+        Details: Use a testing framework like Jest or Mocha to write unit and integration tests. Document the API 
+        using Swagger or similar tools.
